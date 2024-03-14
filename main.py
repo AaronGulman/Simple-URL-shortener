@@ -11,5 +11,12 @@ shortUrl_entry = tkinter.Entry(root)
 shorten_button = tkinter.Button(root,text = "Shortern URL")
 
 
+longUrl_label.pack()
+longUrl_entry.pack()
+shortUrl_label.pack()
+shortUrl_entry.pack()
+shorten_button.pack()
+
+
 
 root.mainloop()
