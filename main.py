@@ -1,4 +1,10 @@
 import tkinter
+import pyshorteners
+
+def shorten():
+        shortener = pyshorteners.Shortener()
+        short_url = shortener.tinyurl.short(longUrl_entry.get())
+        shortUrl_entry.insert(0, short_url)
 
 root = tkinter.Tk()
 root.title("URL Shortener")
@@ -8,7 +14,7 @@ longUrl_label = tkinter.Label(root, text = "Enter your URL: ")
 longUrl_entry = tkinter.Entry(root)
 shortUrl_label = tkinter.Label(root, text ="Shortened URL: ")
 shortUrl_entry = tkinter.Entry(root)
-shorten_button = tkinter.Button(root,text = "Shortern URL")
+shorten_button = tkinter.Button(root,text = "Shortern URL" , command = shorten)
 
 
 longUrl_label.pack()
